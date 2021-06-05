@@ -1,9 +1,9 @@
 {
   "name": "react-circular-progress-sections",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Circular Section wise progresses graph",
-  "main": "dist/index.js", 
-  "module": "dist/index.es.js", 
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
