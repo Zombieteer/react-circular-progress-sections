@@ -1,5 +1,12 @@
 # react-circular-progress-sections
 
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+![npm]](https://img.shields.io/npm/v/react-circular-progress-sections)
+![GitHub repo size](https://img.shields.io/github/repo-size/zombieteer/react-circular-progress-sections)
+![GitHub followers](https://img.shields.io/github/followers/zombieteer?style=social)
+
+![Sample Image](https://github.com/Zombieteer/react-circular-progress-sections/sample.png?raw=true)
+
 This library is an extended version of [React Circular Progressbar](https://www.npmjs.com/package/react-circular-progressbar).
 Since there are no graph packages out there that can provide such an awesome graph.
 Not even the library mentioned above.
@@ -11,6 +18,17 @@ npm i react-circular-progress-sections
 ```
 
 ## Usage
+
+Wrap the Component inside a `div` and provide it with a width
+
+Set the `data` as array of objects,
+Each object having 
+
+- `name`, 
+- `total` i.e. total value, 
+- `completed` i.e. completed out of `total`,
+- `color` i.e. color of that object,
+- `innerText` i.e. jsx of the data inside the Ring
 
 ```
 import CircularProgressRing from "react-circular-progress-sections";
@@ -27,11 +45,13 @@ import CircularProgressRing from "react-circular-progress-sections";
     const [background, setBackground] = useState("#22C880");
   
     return (
-        <CircularProgressRing
-          data={data}
-          trailColor={trailColor}
-          background={background}
-        />
+	<div style={{ width: 800 }}>
+		<CircularProgressRing
+		  data={data}
+		  trailColor={trailColor}
+		  background={background}
+		/>
+	</div>
     );
 ```
 ##### Inner Text
