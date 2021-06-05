@@ -5,7 +5,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/zombieteer/react-circular-progress-sections)
 ![GitHub followers](https://img.shields.io/github/followers/zombieteer?style=social)
 
-![Sample Image](https://github.com/Zombieteer/react-circular-progress-sections/blob/master/sample.png)
+![Sample Image](https://github.com/Zombieteer/react-circular-progress-sections/blob/master/sample.png){ width=50% }
 
 This library is an extended version of [React Circular Progressbar](https://www.npmjs.com/package/react-circular-progressbar).
 Since there are no graph packages out there that can provide such an awesome graph.
