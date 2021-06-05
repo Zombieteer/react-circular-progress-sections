@@ -1,4 +1,4 @@
-# react-circular-progress-
+# react-circular-progress-sections
 
 This library is an extended version of [React Circular Progressbar](https://www.npmjs.com/package/react-circular-progressbar).
 Since there are no graph packages out there that can provide such an awesome graph.
