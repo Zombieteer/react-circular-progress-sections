@@ -1,11 +1,11 @@
 # react-circular-progress-sections
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-![npm]](https://img.shields.io/npm/v/react-circular-progress-sections)
+![npm](https://img.shields.io/npm/v/react-circular-progress-sections)
 ![GitHub repo size](https://img.shields.io/github/repo-size/zombieteer/react-circular-progress-sections)
 ![GitHub followers](https://img.shields.io/github/followers/zombieteer?style=social)
 
-![Sample Image](https://github.com/Zombieteer/react-circular-progress-sections/sample.png?raw=true)
+![Sample Image](https://github.com/Zombieteer/react-circular-progress-sections/sample.png)
 
 This library is an extended version of [React Circular Progressbar](https://www.npmjs.com/package/react-circular-progressbar).
 Since there are no graph packages out there that can provide such an awesome graph.
