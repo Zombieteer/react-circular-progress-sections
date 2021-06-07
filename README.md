@@ -1,9 +1,9 @@
 # react-circular-progress-sections
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
-![npm](https://img.shields.io/npm/v/react-circular-progress-sections)
-![GitHub repo size](https://img.shields.io/github/repo-size/zombieteer/react-circular-progress-sections)
-![GitHub followers](https://img.shields.io/github/followers/zombieteer?style=social)
+[![npm](https://img.shields.io/npm/v/react-circular-progress-sections)](https://www.npmjs.com/package/react-circular-progress-sections)
+[![GitHub repo size](https://img.shields.io/github/repo-size/zombieteer/react-circular-progress-sections)](https://github.com/Zombieteer/react-circular-progress-sections)
+[![GitHub followers](https://img.shields.io/github/followers/zombieteer?style=social)](https://github.com/Zombieteer)
 
 ![Sample Image](https://github.com/Zombieteer/react-circular-progress-sections/blob/master/sample.png).
 
