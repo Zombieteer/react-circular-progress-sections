@@ -1,6 +1,6 @@
 {
   "name": "react-circular-progress-sections",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Circular Section wise progresses graph",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
