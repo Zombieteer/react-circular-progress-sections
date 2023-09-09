@@ -7,7 +7,7 @@ import {
 import "react-circular-progressbar/dist/styles.css";
 import ChangingProgressProvider from "./ChangingProgressProvider";
 
-const Div = styled.div`
+const Div = styled.div<{ background: any }>`
   /* Circular progress Div */
   display: flex;
   flex-direction: column;
@@ -22,13 +22,15 @@ const Div = styled.div`
   }
 `;
 
-const Divn = styled.div`
+const Divn = styled.div<{ activeData: any; id: any }>`
   transform: ${({ activeData, id }: any) =>
     activeData === null || activeData === id ? "scale(1.1)" : "scale(1)"};
   transition: unset;
 `;
 
-const CircularProgress = styled(CircularProgressbarWithChildren)`
+const CircularProgress = styled(CircularProgressbarWithChildren)<{
+  borderColor: any;
+}>`
   filter: drop-shadow(1.5px 1.5px 1px ${({ borderColor }: any) => borderColor})
     drop-shadow(-1px 1px 0.4px ${({ borderColor }: any) => borderColor})
     drop-shadow(1px -1px 0.4px ${({ borderColor }: any) => borderColor})
