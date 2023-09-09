@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
-export const ChangingProgressProvider = ({ values, children }) => {
+export const ChangingProgressProvider = ({ values, children }: any) => {
   const [valuesIndex, setValueIndex] = useState(0);
   const interval = 0;
 

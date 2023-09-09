@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { Fragment, useEffect, useState } from "react";
+import { Fragment, SetStateAction, useEffect, useState } from "react";
 import ProgressMap from "./ProgressMap";
 import "./index.css";
 
@@ -7,12 +7,12 @@ const CircularSections = ({
   data,
   trailColor = "#fff",
   background = "#22C880",
-}) => {
+}: any) => {
   const [activeData, setActiveData] = useState(0);
 
-  const [localData, setLocalData] = useState([]);
+  const [localData, setLocalData]: any[] = useState([]);
 
-  const changeActive = (e, i) => setActiveData(i);
+  const changeActive = (i: SetStateAction<number>) => setActiveData(i);
 
   useEffect(() => {
     let total = 0;
@@ -22,19 +22,16 @@ const CircularSections = ({
       total += data[i].total;
     }
 
-    let localTempData = [];
-    data.forEach((item, id) => {
+    let localTempData: any[] = [];
+    data.forEach((item: { completed: number; total: number }, id: number) => {
       let completePercent = (item.completed / item.total) * 100;
       let totalPercent = (item.total / total) * 100;
-      localTempData = [
-        ...localTempData,
-        {
-          ...item,
-          totalPercent: totalPercent - gapPercent,
-          completePercent: completePercent,
-          startPercent: totalTemp[id] + gapPercent,
-        },
-      ];
+      localTempData.push({
+        ...item,
+        totalPercent: totalPercent - gapPercent,
+        completePercent: completePercent,
+        startPercent: totalTemp[id] + gapPercent,
+      });
       totalTemp.push(totalTemp[id] + totalPercent);
     });
     setLocalData(localTempData);
@@ -50,15 +47,14 @@ const CircularSections = ({
       />
 
       <div className="WidgetUtils">
-        {data.map((item, id) => {
+        {data.map((item: any, id: number) => {
           return (
             <div
               key={id}
-              item
               className={
                 activeData === id ? "WidgetActiveUtil" : "WidgetInactiveUtil"
               }
-              onClick={(e) => changeActive(e, id)}
+              onClick={() => changeActive(id)}
             >
               {item.icon ? <img src={item.icon} alt={item.name} /> : <></>}
               <span>{item.name}</span>

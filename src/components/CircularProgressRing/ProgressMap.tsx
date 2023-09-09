@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import {
@@ -13,7 +12,7 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  background: ${(props) => props.background};
+  background: ${({ background }: any) => background};
   width: fit-content;
   margin: 0 auto;
   border-radius: 50%;
@@ -24,28 +23,31 @@ const Div = styled.div`
 `;
 
 const Divn = styled.div`
-  transform: ${(props) =>
-    props.activeData === null || props.activeData === props.id
-      ? "scale(1.1)"
-      : "scale(1)"};
+  transform: ${({ activeData, id }: any) =>
+    activeData === null || activeData === id ? "scale(1.1)" : "scale(1)"};
   transition: unset;
 `;
 
 const CircularProgress = styled(CircularProgressbarWithChildren)`
-  filter: drop-shadow(1.5px 1.5px 1px ${(props) => props.borderColor})
-    drop-shadow(-1px 1px 0.4px ${(props) => props.borderColor})
-    drop-shadow(1px -1px 0.4px ${(props) => props.borderColor})
-    drop-shadow(-1px -1px 0.4px ${(props) => props.borderColor});
+  filter: drop-shadow(1.5px 1.5px 1px ${({ borderColor }: any) => borderColor})
+    drop-shadow(-1px 1px 0.4px ${({ borderColor }: any) => borderColor})
+    drop-shadow(1px -1px 0.4px ${({ borderColor }: any) => borderColor})
+    drop-shadow(-1px -1px 0.4px ${({ borderColor }: any) => borderColor});
 `;
 
-export const ProgressMap = ({ data, activeData, trailColor, background }) => {
+export const ProgressMap = ({
+  data,
+  activeData,
+  trailColor,
+  background,
+}: any) => {
   return (
     <div style={{ position: "relative" }}>
       <Div background={background}>
-        {data.map((item, id) => (
+        {data.map((item: any, id: number) => (
           <Divn key={id} activeData={activeData} id={id}>
             <ChangingProgressProvider values={[0, item.completePercent]}>
-              {(values) => (
+              {(values: number) => (
                 <CircularProgress
                   borderColor={item.color}
                   value={values}
